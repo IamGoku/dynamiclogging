@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_FFNVEJEyEeuabZyJm4-Lfw" targetNamespace="http://tns.tibco.com/bw/composite/test" name="test" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_jGhMkJEyEeuabZyJm4-Lfw" name="api-mdm-api-tosf-log" promote="Componenttest/api-mdm-api-tosf-log">
+    <sca:interface.wsdl xmi:id="_jGqWgJEyEeuabZyJm4-Lfw" interface="http://xmlns.example.com/20210330140305PLT#wsdl.interface(api-mdm-api-tosf-log)" scaext:wsdlLocation="../Processes/test/module/test.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_jJmVwJEyEeuabZyJm4-Lfw" name="RestService" path="/api/mdm/api/tosf/log/{dolog}" docBasePath="http://localhost:7777/test_module" docResourcePath="test" basePath="/" connector="test.module.test" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/test.module.test-test.json">
+      <operation xmi:id="_jJx78JEyEeuabZyJm4-Lfw" operationName="get" nickname="get-api-mdm-api-tosf-log" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_jNJZAJEyEeuabZyJm4-Lfw">
+        <parameterMapping xmi:id="_jNKnIJEyEeuabZyJm4-Lfw" parameterName="dolog" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_jJscYJEyEeuabZyJm4-Lfw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_jJyjAJEyEeuabZyJm4-Lfw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_F-NZoJEyEeuabZyJm4-Lfw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-d4UJEyEeuabZyJm4-Lfw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-j-8JEyEeuabZyJm4-Lfw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-qFkJEyEeuabZyJm4-Lfw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-wMMJEyEeuabZyJm4-Lfw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-254JEyEeuabZyJm4-Lfw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F-9AgJEyEeuabZyJm4-Lfw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F_DHIJEyEeuabZyJm4-Lfw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F_JNwJEyEeuabZyJm4-Lfw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_MyaY4JY2Eeuaj8X1srDVOw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:component xmi:id="_Flf-sJEyEeuabZyJm4-Lfw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Flf-sZEyEeuabZyJm4-Lfw" processName="test.module.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_jGbF8JEyEeuabZyJm4-Lfw" name="Componenttest" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jGbF8ZEyEeuabZyJm4-Lfw" processName="test.module.test"/>
+    <sca:service xmi:id="_jGfXYJEyEeuabZyJm4-Lfw" name="api-mdm-api-tosf-log">
+      <sca:interface.wsdl xmi:id="_jGglgJEyEeuabZyJm4-Lfw" interface="http://xmlns.example.com/20210330140305PLT#wsdl.interface(api-mdm-api-tosf-log)" scaext:wsdlLocation="../Processes/test/module/test.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_Dpt6kpYsEeuPBfSkl5_Jdg" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Dpt6k5YsEeuPBfSkl5_Jdg" processName="test.module.Activator"/>
+  </sca:component>
+</sca:composite>
