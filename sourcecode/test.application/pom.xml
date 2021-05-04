@@ -56,7 +56,7 @@
           <certPath>${bwdocker.certPath}</certPath>
           <images>
             <image>
-              <alias>${bwdocker.containername}</alias>
+              <alias>${bwdocker.containername}${env.BUILD_NUMBER}</alias>
               <name>${docker.image}</name>
               <build>
                 <from>${bwdocker.from}</from>
